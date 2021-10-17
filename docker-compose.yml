@@ -1,0 +1,30 @@
+version: '3'
+services:
+  mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: guacdb
+      MYSQL_USER: guacuser
+      MYSQL_PASSWORD: guacuserpw
+    volumes:
+      - ${PWD}/initdb.sql:/docker-entrypoint-initdb.d/initdb.sql
+      - mysql_data:/var/lib/mysql
+  guacd:
+    image: guacamole/guacd
+    depends_on:
+    - mariadb
+  guacamole:
+    image: guacamole/guacamole
+    depends_on:
+    - guacd
+    environment:
+      GUACD_HOSTNAME: guacd
+      MYSQL_HOSTNAME: mariadb
+      MYSQL_DATABASE: guacdb
+      MYSQL_USER: guacuser
+      MYSQL_PASSWORD: guacuserpw
+    ports:
+    - '8080:8080'
+volumes:
+  mysql_data:
