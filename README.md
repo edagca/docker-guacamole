@@ -1,5 +1,7 @@
 # Apache Guacamole with docker-compose
-Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. For more information: http://guacamole.apache.org/
+Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. For more information: 
+http://guacamole.apache.org/
+https://hub.docker.com/r/guacamole/guacamole
 
 ## Quickstart
 ```
