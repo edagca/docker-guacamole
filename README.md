@@ -9,15 +9,15 @@ docker-compose up -d
 ```
 Your guacamole server should be available at `http://HOST_IP:8080/guacamole`. The default username is `guacadmin` with password `guacadmin`. This user should be cloned and deleted ASAP.
 
-### To shutdown Guacamole server:
+#### To shutdown Guacamole server:
 ```
 docker-compose down
 ```
-### To reset/delete Guacamole data (database)
+#### To reset/delete Guacamole data (database)
 ```
 docker volume rm docker-guacamole_mysql_data
 ```
-
+---
 #### Notes:
 The `initdb.sql` file was created as per https://guacamole.apache.org/doc/gug/guacamole-docker.html 
 ```
