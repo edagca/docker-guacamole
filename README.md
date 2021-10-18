@@ -7,7 +7,7 @@ git clone https://github.com/edagca/docker-guacamole.git
 cd docker-guacamole/
 docker-compose up -d
 ```
-Your guacamole server should be available at `http://HOST_IP:8080/guacamole`. The default username is `guacadmin` with password `guacadmin`. This user should be cloned and deleted ASAP.
+Your guacamole server should be available at `http://HOST_IP:8080/guacamole`. The default username is `guacadmin` with password `guacadmin`. This user should be cloned and deleted immediately.
 
 #### To shutdown Guacamole server:
 ```
